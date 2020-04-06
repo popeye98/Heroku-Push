@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ 
+    <title>Marks Prediction</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script></head>
+<body>
+<div class="container">
+    <h2>Marks Predictions</h2>
+    <!-- <form action="/" method="post">
+    <input type="text" placeholder="Hours" name="hours">
+        <input type="submit" class="btn btn-primary">
+
+        {% if your_mark %}
+          <h1>Yours marks are : <i>{{your_mark}}</i></h1>
+        {% endif %}
+</form> -->
+
+<nav class="navbar navbar-inverse">
+ 
+  <p class="navbar-text">Marks Predictions</p>
+</nav>
+
+<form class="form-inline" action="/" method="post">
+  <div class="form-group">
+    <label for="inputPassword6">Password</label>
+    <input type="text" id="inputPassword6" name="hours" aria-describedby="passwordHelpInline">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+  {% if your_mark %}
+  <h1>Yours marks are : <i>{{ "%.2f"|format(your_mark|float) }}</i></h1>
+{% endif %}
+
+</form>
+</div>
+</body>
+</html>
